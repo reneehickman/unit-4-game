@@ -1,0 +1,49 @@
+body{
+    background:url(../images/crystalBg3.png) repeat;
+}
+
+
+header{
+    /* background:#0065a9; */
+    background:url(../images/bg2.jpg);
+    background-size:cover;
+    padding:40px;
+    margin:0px;
+    text-align:center;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.contentWrap{
+    padding:0px;
+}
+
+.contentCol{
+    background:#fff;
+    margin:15px;
+    padding:20px 30px;
+    border: 1px solid #ddd;
+}
+
+
+#directionsText p{
+    font-size:1em;
+}
+
+#directionsText h4{
+    color:#0065a9;
+    border-bottom:1px solid #0065a9;
+    padding-bottom:10px;
+    margin-bottom:10px;
+}
+
+
+.numberToMatchContainer,
+.winsLossesContainer,
+.scoreCounterContainer{
+    /* background:#0065a9; */
+    /* color:#fff; */
+    /* padding:10px 15px; */
+    /* height:90px; */
+    margin:10px;
+}
