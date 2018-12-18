@@ -6,9 +6,7 @@ var losses = 0;
 
 var scoreCounter = 0;
 
-var targetNumber = "";
-
-var images = [ "assets/images/red.png", "assets/images/blue.png", "assets/images/yellow.png", "assets/images/green.png"];
+var images = [ '../images/red.png', '../images/blue.png', '../images/yellow.png', '../images/green.png'];
 
 console.log(images);
 
@@ -32,27 +30,13 @@ function setCrystalValues(){
         crystalImage.attr("height", "100");
         //Gives each crystal a random value between 1 - 12.
         crystalImage.attr("value", (Math.floor(Math.random() * 12) + 1));
-        var crystalElement = $(".crystalImages");
         //Each crystal image (with all it classes and attributes) will get added to the page.
-        crystalElement.append(crystalImage);
+        $("#crystalImages").append(crystalImage);
     };
 };
+console.log(setCrystalValues);
 
-
-function setHTML () {
-    $("#currentNumberToMatch").html(targetNumber);
-    $("#winsTotal").html(wins);
-    $("#lossesTotal").html(losses);
-    $(".scoreCounter").html(scoreCounter);
-};
-
-setCrystalValues();
-setHTML();
-
-
-
-
-// function restartGame(){
+// function startGame(){
 //     generateTargetNumber();
 //     setCrystalValues();
 //     scoreCounter = 0;
