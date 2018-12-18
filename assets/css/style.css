@@ -11,7 +11,7 @@ header{
     /* background:#0065a9; */
     background:url(../images/bg2.jpg);
     background-size:cover;
-    padding:40px;
+    padding:40px 0px;
     margin:0px;
     text-align:center;
     margin-bottom:10px;
@@ -80,24 +80,23 @@ header{
 
 
 .scoreCounterContainer{
-    padding:10px;
-    /* background:url(../images/bg4.jpg);
-    background-position:top;
-    background-size:cover; */
+    padding:2px;
     text-align:center;
     margin-top:25px;
-    color:#0065a9;
-    background:#eee;
+    color:#fff;
+    background:url(../images/bg4.jpg);
+    background-position:top;
+    background-size:cover;
 }
 
 .scoreCounterContainer h4{
-    margin-top:8px;
+    margin-top:9px;
 }
 
 #scoreCounter{
-    background:url(../images/bg4.jpg);
+    /* background:url(../images/bg4.jpg); */
     color:#fff;
-    padding:5px 15px;
+    /* padding:5px 15px; */
     font-size:1.3em;
     font-weight:bold;
     vertical-align:middle;
@@ -123,7 +122,7 @@ header{
 
 @media (max-width: 575.98px) { 
     .crystalImages img{
-        height:140px;
+        height:120px;
         margin:5px;
 }
 
@@ -141,12 +140,27 @@ header{
 }
 
 .numberToMatchContainer h3{
-    font-size:1.6em;
+    font-size:1.5em;
 }
 
 .scoreCounterContainer{
     margin:15px 0px;
 }
+
+.scoreCounterContainer h4{
+    font-size:1.4em;  
+}
+
+
+.imgWrap{
+    padding-left:0px;
+    padding-right:0px;
+}
+
+header h1{
+    font-size:2.3em;
+}
+
 
 }
 
