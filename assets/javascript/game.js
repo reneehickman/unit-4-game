@@ -15,9 +15,10 @@ console.log(images);
 //Generates a random number between 19-120 ((max-min + 1) + min)
 function generateTargetNumber(){
     targetNumber = Math.floor(Math.random() * 102) + 19;
+    console.log(targetNumber);
 };
 
-
+//function that creates and sets values for each crystal image
 function setCrystalValues(){
     //for loop to create crystals for every images option
     for (var i = 0; i < images.length; i++) {
@@ -38,25 +39,27 @@ function setCrystalValues(){
     };
 };
 
-
+//function that displays html content
 function setHTML () {
     $("#currentNumberToMatch").html(targetNumber);
     $("#winsTotal").html(wins);
     $("#lossesTotal").html(losses);
-    $(".scoreCounter").html(scoreCounter);
+    $("#scoreCounter").html(scoreCounter);
 };
 
+//function to start or reset game
+function startGame(){
+counter = 0;
 setCrystalValues();
+generateTargetNumber();
 setHTML();
+};
+
+
+startGame();
 
 
 
-
-// function restartGame(){
-//     generateTargetNumber();
-//     setCrystalValues();
-//     scoreCounter = 0;
-// };
 
 
 

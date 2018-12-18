@@ -23,35 +23,36 @@
                     <div id="directionsText">
 
                         <h4>How to play:</h4>
-                        <p>You will be given a random number at the start of the game.</p>
+                        <p>You will be given a random number to match at the start of the game.</p>
                         <p>There are four crystals below. By clicking on a crystal you will add a specific amount of
                             points to your total score.</p>
-                        <p>You win the game by matching your total score to random number, you lose the game if your
+                        <p>You win the game by matching your total score to random number. You lose the game if your
                             total score goes above the random number.</p>
-                        <p>The value of each crystal is hidden from you until you click on it.</p>
-                        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+                        <p>The value of each crystal is hidden until you click on it. Each time the game starts, the game will change the values of each crystal.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-7 contentCol"><!--holds all content in the first/left column-->
                     
-                    <div class="row">
+                    <div class="row winsRow">
 
-                        <div class="col-sm-6">
+                        <div class="col">
                     <div class="numberToMatchContainer">
-                    <p>Your number to match:</p>
-                    <h3 id="currentNumberToMatch"></h3>
-                    </div>
-                </div>
+                    <h3>Your number to match: <span id="currentNumberToMatch"></span></h3>
 
-                    <div class="col">
+                    </div>
+                
+
+                    
                     <div class="winsLossesContainer">
+                        <div id="pCenter">
                     <p>Wins: <span id="winsTotal"></span></p>
                     <!-- <span id="winsTotal"></span>will display total wins of all rounds played -->
                     <p>Losses: <span id="lossesTotal"></span></p>
                     <!-- <span id="lossesTotal"></span> will display total losses of all rounds played -->
+                    </div>
                     </div><!---end of winsLossesContainer-->
-                    </div><!--end of col div-->
+                </div>
 
                 </div> <!--end of row div-->
 
@@ -64,9 +65,9 @@
 
                 
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col">
                     <div class="scoreCounterContainer">
-                            <p>Your toal score is: <span id="scoreCounter"></span></p>
+                            <h4>Your toal score is: <span id="scoreCounter"></span></h4>
                     <!-- <span id="totalScore"></span> -->
                     </div>
                 </div>
