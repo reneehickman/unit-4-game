@@ -39,7 +39,7 @@ function setCrystalValues() {
     }
 }
 
-//function that displays html content
+//function that resets and displays html content
 function displayContent() {
     $("#winsTotal").html(wins);
     $('#currentNumberToMatch').html(targetNumber);
@@ -50,8 +50,8 @@ function displayContent() {
 
 //function to start or reset game
 function startGame() {
-    scoreCounter = 0;
     generateTargetNumber();
+    scoreCounter = 0;
     displayContent();
     setCrystalValues();
 };
@@ -63,92 +63,31 @@ generateTargetNumber();
 displayContent();
 setCrystalValues();
 
+// startGame();
+
+
 
 // Click Functions
-function onCrystalClick(){
-$(".crystalImage").on("click", function(){
-    //Using the .attr("value") allows us to grab the value out of the "value" attribute of the crystals.
-    //Since attributes on HTML elements are strings, we must convert it to an integer (parseInt) before adding to scoreCounter
-    var crystalValue = ($(this).attr("value"));
-    crystalValue = parseInt(crystalValue); 
-    scoreCounter += crystalValue;
-    //Each crystal click adds to the global counter.
-    $("#scoreCounter").html(scoreCounter);
-    if (scoreCounter == targetNumber) {
-        wins++;
-        startGame();
-    }
-    else if (scoreCounter > targetNumber) {
-        losses++;
-        startGame();
-    }; 
-});
-
+function onCrystalClick () {
+//Using the .attr("value") allows us to grab the value out of the "value" attribute of the crystals.
+//Since attributes on HTML elements are strings, we must convert it to an integer (parseInt) before adding to scoreCounter
+scoreCounter += parseInt($(this).attr("value"));
+//Each crystal click adds to the global counter.
+$("#scoreCounter").html(scoreCounter);
+if (scoreCounter == targetNumber) {
+wins++;
+startGame();
+}
+else if (scoreCounter > targetNumber) {
+losses++;
+startGame();
 };
-
+};
 //Since we are appending the crystal image element dynamically, set on document click 
-$(document).on('click', '.crystalImage', onCrystalClick);
-
+$(document).on("click", ".crystalImage", onCrystalClick);
 
 
 };
-
-
-
-
-
-
-
-
-
-
-
-    // startGame();
-
-
-
-
-    // };
-
-// $(".crystalImage").on("click", function () {
-
-//     alert('hello there!');
-//     // var crystalElement = $(".crystalImages");
-
-//     //Using the .attr("value") allows us to grab the value out of the "value" attribute of the crystals.
-//     //Since attributes on HTML elements are strings, we must convert it to an integer (parseInt) before adding to scoreCounter
-//     // var crystalValue = ($(this).attr("value"));
-//     // crystalValue = parseInt(crystalValue);
-//     // //Every click, from every crystal adds to the global counter.
-//     // scoreCounter += crystalValue;
-//     // $("#scoreCounter").html(scoreCounter);
-
-// });
-
-
-//Since we are appending the crystal image element dynamically, on document click 
-// $(document).on('click', '.crystalImage', function () {
-
-//     alert('hello there!');
-//     // var crystalElement = $(".crystalImages");
-
-//     //Using the .attr("value") allows us to grab the value out of the "value" attribute of the crystals.
-//     //Since attributes on HTML elements are strings, we must convert it to an integer (parseInt) before adding to scoreCounter
-//     var crystalValue = parseInt($(this).attr("value"));
-
-//     //Every click, from every crystal adds to the global counter.
-//     scoreCounter += crystalValue;
-//     $("#scoreCounter").html(scoreCounter);
-
-// });
-
-
-
-
-
-
-
-
 
 
 
