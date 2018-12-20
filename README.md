@@ -1,6 +1,6 @@
 # unit-4-game
 
-####How to play:
+### How to play:
 
 You will be given a random number to match at the start of the game.
 
